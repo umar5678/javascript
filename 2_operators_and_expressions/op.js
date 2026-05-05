@@ -212,4 +212,5 @@ let user2 = {
 };
 
 // This throws an error!
-// console.log(user2.address.city); // ❌ TypeError: Cannot read property 'city' of undefined
+// console.log(user2.address.city); //  TypeError: Cannot read property 'city' of undefined
+

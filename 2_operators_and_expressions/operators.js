@@ -215,6 +215,14 @@ const canApplyOnJob = (age >= 18 && hasIdCard) && (hasDegree || hasRealExperienc
 
 // && 
 // && 
+// nullish operator, || , ??, 
+
+//  condition || expression
+// || . retrun the left side, false . null, undefined, falsy value i.e. 0
+
+// const data = {id: 123, name: "asdfasf"}
+
+// const hasData = data |
 // console.log(hasData)
 
 // ?? , return right when value is null or undefined
@@ -227,4 +235,138 @@ const canApplyOnJob = (age >= 18 && hasIdCard) && (hasDegree || hasRealExperienc
 
 // || , &&,  nullish operators, 
 // ? : // ternary operators, 
-// ?. // optional chaining   
+// ?. // optional chaining  
+
+
+// Optional chaining : ?.
+
+const user = {
+    name: "Ahmad",
+    email: "ahmad@123.com",
+    age : 900,
+    address : {
+        city: "Mulbrin", 
+        country: "Australia", 
+        street: 'kuchbhe'
+    }
+    
+}
+
+
+// console.log(user.name)
+// console.log(user.age)
+// console.log(user.email)
+
+
+// console.log(user.address)
+// console.log(user.address.country)
+
+
+
+const userTwo = {
+    name: "Ali",
+    email: "ali@123.com",
+    age : 0.4,
+    
+}
+
+// console.log(userTwo.name)
+// console.log(userTwo.address) // undefined. 
+// console.log(userTwo.address?.city) // will not crash, simply return undefined
+
+// in object, if a value might be undefined, then , and we have to access its value, then use optional chanining
+
+
+const computer = {
+    name: "Dell xp 13", 
+    storage: "512GB",
+
+    ram : {
+        capacity: "16Gb", 
+        type: "DDR4"
+    },
+    cpu: {
+        generation: "7th", 
+        series: "i5", 
+        info: {
+            clockSpeed: "3.2GHz"
+        }
+
+    }
+
+}
+const AppleComputer = {
+    name: "MacBook16", 
+    storage: "512GB",
+    cpu: "M16",
+    ram : {
+        capacity: "16Gb", 
+        type: "DDR6"
+    },
+
+}
+
+// get both computer , ram capacity . cpu gen . cpu clock speed
+
+// console.log(computer.ram.capacity)
+// console.log(computer.cpu.info.clockSpeed)
+// console.log(AppleComputer.cpu.info?.clockSpeed) // undefined6 fa
+
+
+
+// 
+
+// console.log("false",  false )
+// console.log("0",  Boolean(0) )   
+// console.log("null",  Boolean(null) )   
+// console.log(" '' ",  Boolean('') )   
+// console.log(" `` ",  Boolean(``) )   
+// console.log("undefined",  Boolean(undefined) )   
+// console.log("-0",  Boolean(-0) )   
+// console.log("+0",  Boolean(+0) )   
+// console.log("0.0",  Boolean(0.0) );  
+// console.log("NaN",  Boolean(NaN) );  
+
+
+// console.log("[]",  Boolean([]) );
+// console.log("{}",  Boolean({}) )  
+
+
+
+console.log("arrow fun that gives undefined",  Boolean((() => undefined) ()) )  
+
+
+// function sayHello () {
+//     return undefined
+// }
+
+// con// function sayHello () {
+//     return undefined
+// }sole.log(sayHello)
+// console.log(sayHello())
+// // console.log(sayHello)
+
+
+// const simpleArrow = () => null
+
+// console.log(simpleArrow)
+// console.log(simpleArrow())
+
+
+// immediatle
+
+
+const sayHello = function() {
+    console.log("Hello ")
+}
+
+sayHello // function expression,.
+sayHello() // calling the funciton, function call
+
+
+// anonymous function
+;
+(() => console.log(12))() // IFFE, immediately invoked function expression
+// start a server, start : database conncetion
+
+// = , ==, ===, DMAS . division, muliplication, addition, sub
