@@ -208,9 +208,8 @@ console.log(atmWithDrawal(true, 672, 700))
 
 // dummy login function, 
 
-// this function get enail, and password,, and then comapre it if it matches the its own then it say welcome
+// this function get email, and password,, and then comapre it if it matches the its own then it say welcome
 
-//
 
 
 
@@ -231,21 +230,75 @@ console.log(atmWithDrawal(true, 672, 700))
 // 
 
 // function checkProfile(username, age, bio) {
-//     // Hint: Use the "!" operator or check against null/undefined
+// Hint: Use the "!" operator or check 
+
+
+// assignemt, validate registration, 
+// validate email,
+// password is required, must be more then 8 chars, 
+// age must be >= 18
+// agreettoTandC . 
+
+// against null/undefined
 //     // Example: if (!username) { return "Username missing" }
 // }
 
 // console.log(checkProfile("Asim", 25, "Hello!")); // "Profile Complete!"
 // console.log(checkProfile("", 25, "Hello!"));    // "Username missing"
-// console.log(checkProfile("Asim", 0, ""));        // "Bio missing"
+// console.log(checkProfile("Asim", 0, ""));   
+
+
+// assignemt, validate registration, 
+// validate email,
+// password is required, must be more then 8 chars,  or less then 32
+// age must be >= 18
+// agreettoTandC . 
 
 
 
+function validateRegistreation (email , password , age,  agreedToTnC) {
+
+    console.log(age)
+
+    // email validation contians @ or not
+    if(!email.includes("@")){
+        return `Please enter a valid email`
+    }
+    if(password > 8 && password < 32) {
+        return `password should be atlease 8 chr long, and less then 32 char`
+    }
+
+    if((age >= 18) && (age > 65)){
+        return `age should be 18 or above , but less then 65`
+    }
+
+    if(!agreedToTnC){
+        return `User must agree to T n C`
+    }
+
+    return `Registraion validation successful`
+
+}
+
+
+console.log(validateRegistreation ("user@email.com" , "asdfasf79879" , 11 ,  false) )
+
+
+// "Bio missing"
 // the 24-Hour Clock Converter
 // The Challenge: Create a function that converts a 24-hour format hour (0 to 23) into 12-hour format with "AM" or "PM".
-
 // 0 should return "12 AM".
-
 // 12 should return "12 PM".
-
 // 13 to 23 should return "1 PM" to "11 PM".
+
+
+
+
+
+
+
+
+
+
+
+

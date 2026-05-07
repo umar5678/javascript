@@ -14,14 +14,76 @@
 
 // sun : 0
 // mon : 1
-// ..
+// tue : 2
+// sat : 6
 
+
+
+
+// function  getDayNameByNum (dayNum) {
+
+//     let dayName = [] 
+
+//     switch(dayNum){
+//         case 0:
+//              dayName.push("Sunday")
+//             break
+//         case 1:
+//             dayName.push("Monday")
+//             break
+//         case 2:
+//             dayName.push("Tuesday")
+//             break
+//         case 3:
+//             dayName.push( "Wednesday")
+//             break
+//         case 4:
+//             dayName.push("Thrus")
+//             break
+//         case 5:
+//             dayName.push("Fri")
+//             break
+//         case 6:
+//             dayName.push( "Sat")
+//             break
+//         default:
+//             dayName.push("Not a valid day number ")
+//     }
+//     return dayName
+// }
+
+// console.log(getDayNameByNum(0))
 
 
 // weather... raining, strome , snowing , sunny
 
 
-// 
+// we can test multiple cases at the same time,  switch is the best here
+// we cannot test ranges , 
+
+// function checkWeather (weather) {
+
+//     let userMsge 
+
+//     switch (weather) {
+//         case "raining": 
+//         case "strome": 
+//         case "snowing": 
+//             userMsge = "get an ubmraila"
+//             break
+//         case "sunny": 
+//             userMsge = "get sun glasses , or stay inside"
+//             break
+//         default: 
+//             userMsge = "Wather data not available"
+   
+//     }   
+    
+//     return userMsge
+
+// }
+
+// console.log(checkWeather("winter"))
 
 
 // month days calculator 
@@ -37,6 +99,25 @@
 //         return `${year} is not a leap year, Feb has 28 days`
 //     }
 // }
+
+// 365 day, ~6 hours
+
+// 365 . 2
+
+// 31 days months: 
+// january, , March , , MAy, , July , August, , . Octuber,, december, 
+
+// 30 , Apr, JUne, september , november
+
+// 28 , 29  february
+
+// 0000, 1000, 1623, 1990, 1960 , 2000, 2004, 2019, 2026 , 
+
+
+
+
+
+
 
 // console.log(isLeapYear(2016))
 
@@ -115,12 +196,13 @@
 // BAD: Nested version
 // function processPaymentBad(user, amount, paymentMethod) {
 //     if (user) {
-//         if (user.isActive) {
+//         if (user.isActive) { if (user.isActive) {
+//             if (amount > 0) {
 //             if (amount > 0) {
 //                 if (amount <= user.balance) {
 //                     if (paymentMethod) {
 //                         if (paymentMethod === "card" || paymentMethod === "wallet") {
-//                             // Process payment
+//                             // Process paymenmentMethod === "card" || paymentMethod === "wallet"t
 //                             user.balance -= amount;
 //                             return { success: true, newBalance: user.balance };
 //                         } else {
@@ -142,6 +224,66 @@
 //         return { success: false, error: "User not found" };
 //     }
 // }
+
+
+// if payment method is not card or peyment method is not wallet then throw error  
+
+
+// const user = {
+//     name :  "Osmama", 
+//     isActive : true, 
+//     accountBalance : 5000
+// }
+
+// function processPaymentGood(user, amount, paymentMethod) {
+
+//     const CARD_METHOD = "card" 
+//     const WALLET_METHOD = "wallet" 
+
+//     console.log(WALLET_METHOD, CARD_METHOD)
+
+//     console.log(paymentMethod === CARD_METHOD) // false
+//     console.log(paymentMethod === WALLET_METHOD) // false
+//     console.log("payment method: ", paymentMethod)
+
+//     console.log((paymentMethod !== "card")  (paymentMethod !== "wallet"))
+        
+
+
+//     return
+
+//     if(!user) {WALLET_METHOD 
+//         return  `user is rerequired`
+//     }
+
+//     if(!user.isActive){
+//         return   `User is not active`
+//     }
+
+//     if(amount < 0 ) {
+//         return  `Amount cannot be less then zero`
+//     }
+
+//     if(amount > user.accountBalance) {
+//         return `amount cannot be greater then available balance`
+//     }
+//     // "card" , "wallet" , "cash" not available
+//     if(!(paymentMethod !== CARD_METHOD ) && (paymentMethod !== WALLET_METHOD) ){
+//        return `Payment method should be card or wallet`
+//     }
+
+//     const newBalance = user.accountBalance - amount
+//     const newUser = { ...user, accountBalance : newBalance}   // object destructuring
+
+//     return {
+//         succes: true, 
+//         user : newUser
+//     }
+// }
+
+
+// const paymentResult = processPaymentGood(user, 2000, "car")
+// console.log(paymentResult)
 
 // password strength checker :  it uses regex. advance
 
