@@ -1,14 +1,14 @@
-// use switch where we have to test a condition again multiple cases. 
+// use switch where we have to test a condition again multiple cases.
 // // Switch is best for comparing ONE value against MULTIPLE possible matches
 // Use instead of long else-if chains with equality checks
 
 // switch (expression) {
-// case valeu1: 
-    // code 
-    // case value2: 
-    // code 
-    // case value3: 
-    // code 
+// case valeu1:
+// code
+// case value2:
+// code
+// case value3:
+// code
 // default
 //}
 
@@ -17,12 +17,9 @@
 // tue : 2
 // sat : 6
 
-
-
-
 // function  getDayNameByNum (dayNum) {
 
-//     let dayName = [] 
+//     let dayName = []
 
 //     switch(dayNum){
 //         case 0:
@@ -54,43 +51,40 @@
 
 // console.log(getDayNameByNum(0))
 
-
 // weather... raining, strome , snowing , sunny
 
-
 // we can test multiple cases at the same time,  switch is the best here
-// we cannot test ranges , 
+// we cannot test ranges ,
 
 // function checkWeather (weather) {
 
-//     let userMsge 
+//     let userMsge
 
 //     switch (weather) {
-//         case "raining": 
-//         case "strome": 
-//         case "snowing": 
+//         case "raining":
+//         case "strome":
+//         case "snowing":
 //             userMsge = "get an ubmraila"
 //             break
-//         case "sunny": 
+//         case "sunny":
 //             userMsge = "get sun glasses , or stay inside"
 //             break
-//         default: 
+//         default:
 //             userMsge = "Wather data not available"
-   
-//     }   
-    
+
+//     }
+
 //     return userMsge
 
 // }
 
 // console.log(checkWeather("winter"))
 
-
-// month days calculator 
+// month days calculator
 
 // for january 31, feb 28 if non leap , 29 if leap year,, march : 30,  an dso on
 
-// leap year finder funciton; 
+// leap year finder funciton;
 
 // function isLeapYear(year) {
 //     if((year % 4 === 0 && year % 100 !== 0  ) || year % 400 === 0) {
@@ -104,48 +98,132 @@
 
 // 365 . 2
 
-// 31 days months: 
-// january, , March , , MAy, , July , August, , . Octuber,, december, 
+// 31 days months:
+// january, , March , , MAy, , July , August, , . Octuber,, december,
+
+// auth, RBAC ,
+// crud  , 1 ,
+// Blog, , 2 ,
+// social , post, real time communication , 2 ,
+// ECOM. Notificaion, 3,
+// sprint,
+
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  }
+  return false;
+}
+console.log(isLeapYear(2040));
+
+function daysInMonth(month, year) {
+  let day;
+
+  switch (month) {
+    case "january":
+    case "march":
+    case "may":
+    case "july":
+    case "august":
+    case "october":
+    case "december":
+      day = `${month} in ${year} has 31 days`;
+      break;
+    case "april":
+    case "june":
+    case "september":
+    case "november":
+      day = `${month} in ${year} has 30 days`;
+      break;
+    case "february":
+      const isLeapYearResult = isLeapYear(year);
+      day = isLeapYearResult
+        ? `${month} in ${year} has 29 days`
+        : `${month} in ${year} has 28 days`;
+      break;
+    default:
+      day = "Invalid month";
+  }
+  return day;
+}
+
+// console.log(daysInMonth("august", 2022))
 
 // 30 , Apr, JUne, september , november
 
 // 28 , 29  february
 
-// 0000, 1000, 1623, 1990, 1960 , 2000, 2004, 2019, 2026 , 
+// 0000, 1000, 1623, 1990, 1960 , 2000, 2004, 2019, 2026 ,
 
+// // leap year .. (completely  divid by 4 and at same time should not divid by 100) , or  if the year completely divid by 400, then its leap year
 
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  }
 
+  return false;
+}
 
+console.log(isLeapYear(2040));
 
-
+/// 100 - 103 informational,
+/// 200 -
 
 // console.log(isLeapYear(2016))
 
-
-
-
-// print status message based on status code, 
+// print status message based on status code,
 // for 200 , 201, okey
 // for 301, 302, print resource moved
 // for 400, bad request
-// 404, not found, 
+// 404, not found,
 // 401 , unauthorize and so on
 
-// file type categorizations, 
+// file type categorizations,
 
-// video file has these extension: .mp4, av1, mkv. 
+// video file has these extension: .mp4, av1, mkv.
 // images; jpg, jpeg, png
 // audio : mp3, wav, flac
 // doc: docx, doc,
 // pdf: pdf
 // code: .js, .ts. .py. .go
 
+function fileCategoryFinder(ext) {
+  let fileCategory;
+
+  switch (ext) {
+    case ".jpeg":
+    case ".png":
+    case ".jpg":
+    case ".gif":
+      fileCategory = "this is image file";
+      break;
+    case ".docx":
+    case ".doc":
+      fileCategory = "this is Document file";
+      break;
+    case ".pdf":
+      fileCategory = "this is Portable document format file";
+      break;
+    case ".js":
+    case ".rust":
+    case ".py":
+    case ".go":
+    case ".ts":
+      fileCategory = "this is Code file";
+      break;
+    default:
+      fileCategory = "unknown file";
+  }
+
+  return fileCategory;
+}
+
+console.log(fileCategoryFinder(".pdf"));
+
 // also print graiding using switch
 
-
-
 // : User Registration - BAD vs GOOD
-
 
 //  BAD: Deeply nested conditionals (Pyramid of Doom)
 // function registerUserBad(username, email, password, age) {
@@ -189,9 +267,7 @@
 //     }
 // }
 
-
 //: Process Payment - Refactoring Exercise
-
 
 // BAD: Nested version
 // function processPaymentBad(user, amount, paymentMethod) {
@@ -225,20 +301,18 @@
 //     }
 // }
 
-
-// if payment method is not card or peyment method is not wallet then throw error  
-
+// if payment method is not card or peyment method is not wallet then throw error
 
 // const user = {
-//     name :  "Osmama", 
-//     isActive : true, 
+//     name :  "Osmama",
+//     isActive : true,
 //     accountBalance : 5000
 // }
 
 // function processPaymentGood(user, amount, paymentMethod) {
 
-//     const CARD_METHOD = "card" 
-//     const WALLET_METHOD = "wallet" 
+//     const CARD_METHOD = "card"
+//     const WALLET_METHOD = "wallet"
 
 //     console.log(WALLET_METHOD, CARD_METHOD)
 
@@ -247,12 +321,10 @@
 //     console.log("payment method: ", paymentMethod)
 
 //     console.log((paymentMethod !== "card")  (paymentMethod !== "wallet"))
-        
-
 
 //     return
 
-//     if(!user) {WALLET_METHOD 
+//     if(!user) {WALLET_METHOD
 //         return  `user is rerequired`
 //     }
 
@@ -276,17 +348,15 @@
 //     const newUser = { ...user, accountBalance : newBalance}   // object destructuring
 
 //     return {
-//         succes: true, 
+//         succes: true,
 //         user : newUser
 //     }
 // }
-
 
 // const paymentResult = processPaymentGood(user, 2000, "car")
 // console.log(paymentResult)
 
 // password strength checker :  it uses regex. advance
-
 
 //  Nested booking validation
 // function bookAppointmentBad(patient, doctor, date, time) {
@@ -298,8 +368,8 @@
 //                         if (new Date(date) > new Date()) {
 //                             if (time) {
 //                                 if (time >= "09:00" && time <= "17:00") {
-//                                     return { 
-//                                         success: true, 
+//                                     return {
+//                                         success: true,
 //                                         booking: { patient: patient.name, doctor: doctor.name, date, time }
 //                                     };
 //                                 } else { return { success: false, error: "Time must be 9AM-5PM" }; }
