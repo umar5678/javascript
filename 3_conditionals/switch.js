@@ -114,7 +114,7 @@ function isLeapYear(year) {
   }
   return false;
 }
-console.log(isLeapYear(2040));
+// console.log(isLeapYear(2040));
 
 function daysInMonth(month, year) {
   let day;
@@ -165,7 +165,7 @@ function isLeapYear(year) {
   return false;
 }
 
-console.log(isLeapYear(2040));
+// console.log(isLeapYear(2040));
 
 /// 100 - 103 informational,
 /// 200 -
@@ -219,7 +219,7 @@ function fileCategoryFinder(ext) {
   return fileCategory;
 }
 
-console.log(fileCategoryFinder(".pdf"));
+// console.log(fileCategoryFinder(".pdf"));
 
 // also print graiding using switch
 
@@ -381,3 +381,90 @@ console.log(fileCategoryFinder(".pdf"));
 //         } else { return { success: false, error: "Patient info incomplete" }; }
 //     } else { return { success: false, error: "Patient required" }; }
 // }
+
+/// full name validation,
+// first name , lastname, both should empty.
+
+//  firstname === "" || lastname === "" // return first and last names are required
+
+// role,  either should be , admin ,  or ,  manager , >>> access dashboard,
+
+function accessDashboard(role) {
+  if (role !== "admin" && role !== "manager") {
+    return `access denied`;
+  }
+
+  return `welcome to the dashboard`;
+}
+
+// console.log(accessDashboard('admin123'))
+
+// javascript, python, rust
+
+function courseEnroll(course) {
+  if (course !== "python" && course !== "javascript" && course !== "rust") {
+    return "only javascript, python and rust course are available,";
+  }
+
+  return `welome to the ${course} course`;
+}
+
+// console.log(courseEnroll("go"))
+
+// Valid: Product price must be greater than 0 and not more than 500,000.
+
+function addProduct(name, price) {
+  if (price <= 0 || price > 500000) {
+    return `Product price must be greater than 0 and not more than 500,000`;
+  }
+  return "Product added: " + name + " at Rs. " + price;
+}
+
+// console.log(addProduct("mouse", 10))
+
+// Valid: A student's CGPA must be between 0.0 and 4.0. Their name must not be empty.
+
+function issueTranscript(studentName, cgpa) {
+  if (cgpa < 0.0 || cgpa > 4.0) {
+    return "NOT issed";
+  }
+
+  return "Transcript issued for " + studentName + " — CGPA: " + cgpa;
+}
+
+// console.log(issueTranscript("Fatima", 4.1 ))
+
+// Valid: A delivery can only be scheduled if status is "ready" or "packed".
+
+function scheduleDelivery(orderId, status) {
+  if (status !== "ready" && status !== "packed") {
+    return "cannot scheduel";
+  }
+  assengerName;
+  return "Delivery scheduled for order: " + orderId;
+}
+
+// console.log(scheduleDelivery(123, "read"))
+
+// Valid: To book a seat, passenger name must not be empty, age must be at least 1 and at most 120, and seat class must be "economy" or "business".
+
+function bookSeat(passengerName, age, seatClass) {
+  if (passengerName.trim() === "") {
+    return "name is required";
+  }
+
+  if (age < 1 || age > 120) {
+    return "age not valid";
+  }
+
+
+  if(seatClass !== "economy" && seatClass !== "business"){
+    return `cannot book a seat`
+  }
+
+
+  return "Seat booked for " + passengerName;
+}
+
+
+// console.log(bookSeat("sadfsadf  ", 20, "econo"))
