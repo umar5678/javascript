@@ -1,6 +1,3 @@
-
-
-
 // FOR LOOP 
 // if we have to reapeat a task, 
 // or we have to iterate over an array or object,
@@ -76,8 +73,20 @@ const alphabats = ["a", "b", "c", "d", "e", "f"]
 //     console.log(2*i);
 //   }
 
-  for( let i = 10 ; i > 0; i-- ){
-    console.log(2*i);
-  }
+  // for( let i = 10 ; i > 0; i-- ){
+  //   console.log(2*i);
+  // }
+
+
+
+// const name = "username" 
+
+// for (char of name) {
+//   console.log(char)
+// }
+
+// for (char in name) {
+//   console.log(char)
+// }
 
 
