@@ -219,7 +219,7 @@ function countVowels(string) {
 }
 
 // console.log(countVowels("Triangle"))
-console.log(countVowels("world?"))
+// console.log(countVowels("world?"));
 // console.log(countVowels("Triangle"));
 
 // ---
@@ -566,3 +566,72 @@ console.log(countVowels("world?"))
 // * Average: 24.00
 // * Minimum: 10
 // * Maximum: 40
+
+/// revers a string
+
+// i have original string , and i have to return a reversed string.
+
+function reversedString(originalString) {
+  if (!originalString || originalString.trim() === "")
+    return "Enter a String...";
+
+  // i have original string , and i have to return a reversed string.
+  // i will run a for loop that start iteration form the last character . and will keep going untill the first char.
+  // i will store that iterative char into an array , reversedSting holder varialbe
+  // or
+  // i will concatincate it into a reversedSting holder varialbe,
+
+  let reversedSrting = "";
+
+  for (let c = originalString.length - 1; c >= 0; c--) {
+    let currentChar = originalString[c];
+    console.log(c)
+
+   reversedSrting = reversedSrting + currentChar;
+    console.log(currentChar)
+  }
+
+  return reversedSrting;
+
+  // return it
+  // if it was array, then return it , by joining all the individual char
+  // if we used a let reversedSetringHolder varialbe, simple return it,.
+}
+
+
+function isPlendrome(originalString) {
+  if (!originalString || originalString.trim() === "")
+    return "Enter a String...";
+
+  // i have original string , and i have to return a reversed string.
+  // i will run a for loop that start iteration form the last character . and will keep going untill the first char.
+  // i will store that iterative char into an array , reversedSting holder varialbe
+  // or
+  // i will concatincate it into a reversedSting holder varialbe,
+
+  let reversedSrting = "";
+
+  for (let c = originalString.length - 1; c >= 0; c--) {
+    let currentChar = originalString[c];
+    console.log(c)
+
+   reversedSrting = reversedSrting + currentChar;
+    console.log(currentChar)
+  }
+  // if compare the revercestring  with oraginalstring using === and the put the result inthe variable 
+  let result = reversedSrting === originalString
+
+
+  return result;
+
+  // return it
+  // if it was array, then return it , by joining all the individual char
+  // if we used a let reversedSetringHolder varialbe, simple return it,.
+}
+
+
+// console.log(reversedString"))
+
+
+
+console.log(isPlendrome("wow"));
