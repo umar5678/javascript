@@ -98,7 +98,7 @@ const greeting = function (name = "Dear User", partOfDay = "Morning") {
     - Stored in variables
     - Passed as arguments
     - Returned from other functions
-    - Stored in arrays/objects
+    - Stored in arrays/objects 
 */
 
 // common function patterns,
