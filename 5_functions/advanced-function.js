@@ -113,8 +113,8 @@ const square = (n) => n * n;
 
 const cube = (n) => n * n * n;
 
-console.log(square(4));
-console.log(cube(4));
+// console.log(square(4));
+// console.log(cube(4));
 
 // const power = (num, exponent) => {
 
@@ -158,7 +158,7 @@ function goodMorning() {
   return `Good Morning`;
 }
 
-console.log(goodMorning());
+// console.log(goodMorning());
 
 // Variation 3: Single parameter - parentheses optional
 // const double = (x) => x * 2;
@@ -172,7 +172,7 @@ console.log(goodMorning());
 // Variation 4: No parameters - parentheses REQUIRED
 const sayHello = () => "Hello!";
 
-console.log(sayHello());
+// console.log(sayHello());
 
 const getTimestamp = () => Date.now();
 const generateId = () => Math.random().toString(36).substr(2, 9);
@@ -181,6 +181,8 @@ const generateId = () => Math.random().toString(36).substr(2, 9);
 // This is a common problem !
 
 const userObj = () => ({ name: "Ali", age: 12 });
+
+const anyObject = () => ({id: 123, name: "thing"})
 
 // console.log(userObj())
 
@@ -192,9 +194,7 @@ const enrollStudent = (name, age, gender, group) => {
 
   
   if (group === "FSc") subjects.push("Bio", "phy", "chem");
-  
-
-  if (group === "ICs")   subjects.push("Math", "phy", "Computer");
+  if (group === "ICs") subjects.push("Math", "phy", "Computer");
   
 
   let section = gender === "male" ? "A" : "B"
@@ -232,7 +232,7 @@ const enrollStudent = (name, age, gender, group) => {
 
 
 const addNumbersOld = (a , b) => a + b
-console.log(addNumbersOld(3, 5));
+// console.log(addNumbersOld(3, 5));
 
 
 // AFTER - Step by step
@@ -275,7 +275,7 @@ const greetOld = (name, greeting) => {
   };
 }
 
-console.log(analyzeNumberOld(15));
+// console.log(analyzeNumberOld(15));
 
 
 /*
@@ -329,27 +329,71 @@ console.log(analyzeNumberOld(15));
 
 // this verification
 
-
 const userInfo = {
-  name : "Ahmad", 
-  age : 34,
+  name : "Ali", 
+  age : 22,
 
-
-  greeting : function () {
+  greetfun : function () {
     return `Hi, my name is ${this.name}`
+  },
+
+  greetArrow : () => {
+    return `Hi, my name is ${this.name}`
+  }, // dont use arrow function as object method 
+}
+
+// console.log(userInfo.name)
+// console.log(userInfo.age)
+
+// console.log(userInfo.greetfun())
+// console.log(userInfo.greetArrow())
+
+// console.log(this)
+
+
+
+function add () {
+  for (let i = 0; i < arguments.length ; i++){
+    console.log(arguments[i])
   }
+}
+
+// console.log(add(12,33,66,77))
 
 
+const addArrow = ( ...params  ) => {
+
+
+  for (let q = 0; q < params.length; q++){
+    console.log(params[q])
+  }
 
 }
 
-console.log(userInfo.greeting())
+
+// console.log(addArrow(5,4,3,2,1))
 
 
+const orignalObj = { name: 'any name', price: 11,  }
+
+// originalObj = 0x342zd343 
+// 0x342zd343 ---> { name: 'any name', price: 11 }
 
 
+console.log(orignalObj) //  { name: 'any name', price: 11,  }
 
 
+const copyByValue = {description: "simple description", ...orignalObj}   /// i got the complete object values
+console.log(copyByValue)
+copyByValue.name = "good name"
+
+
+console.log("before value copy", orignalObj) //  { name: 'any name', price: 11,  }
+
+console.log(copyByValue)  
+
+
+console.log("after value copy", orignalObj) //  { name: 'any name', price: 11,  }
 
 
 
@@ -398,7 +442,7 @@ const arrowRest = (...rest) => {
 
 // add, multiple, divide, subtract
 
-const add = (a, b) => a + b;
+// const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;
 const divide = (a, b) => a / b;
 const multiple = (a, b) => a * b;
