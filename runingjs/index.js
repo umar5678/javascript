@@ -1,0 +1,1 @@
+console.log("This file is running in google chrome, V8 ")
