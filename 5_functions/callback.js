@@ -146,7 +146,7 @@ const processArray = (array, onEach, onSuccess) => {
 
 // function validateUser(user, onSuccess, onError)  , receive use data , call on Error in case of error, and if success, called onSuccess and return validated data
 
-const testUser = { name: "O", age: 11, isVerified: true };
+const testUser = { name: "Osama", age: 11, isVerified: true };
 
 const handleError = (errorMsg) => {
   return `Please fix this error: ${errorMsg}`
@@ -162,7 +162,7 @@ const validationSuccessHandler = (validateUserObj) => {
 
 const validateUser = (user, onError, onSuccess) => {
     const errors = []
-    if (!user.name || user.name.length <= 2) {
+    if (user.name.trim() === "" || user.name.length <= 2) {
     const nameError =  onError("Name is required, and must be more then two char");
     errors.push(nameError)
   }

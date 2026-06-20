@@ -36,7 +36,7 @@ names.unshift("Fatima") // add element at first place
 // dont use shift and unshift on large dataset. 
 
 console.log(names)       
-console.log(names.at(-4))
+console.log(names.at(-4)) // 
 console.log(names.at(0)) 
 console.log(names.at(2))  
 
@@ -69,6 +69,11 @@ console.log(names.at(2))
 // │   Use includes when: You just need YES/NO                       │
 // │                                                                 │
 // └─────────────────────────────────────────────────────────────────┘
+
+
+
+
+
 
 
 
@@ -191,20 +196,48 @@ console.log(names.at(2))
 
 const colors = ["red", "green", "blue", "yellow"]
 
+
 // old way, 
 
 
+const newColors = [ "Pink"  , ...colors, "White"]
+
+
+// console.log("original colors",colors)
+// console.log("New colors", newColors)
+
+console.log(colors[1])
+console.log(colors[2])
+
 // new way
+
+const [red, green, , y] = colors // ["red", "green", "blue", "yellow"]
+
+
+// console.log(red)
+// console.log(green)
+
+// console.log(y)
+// console.log(b)
+
 
 
 
 /// Skip element
 
+const alphabets = ["11", "22", "33", "44" , "55", "66", "88"]
 
+const [a, , c, , , f, g = "77" ] = alphabets
+
+console.log(a, c, f, g)
 
 
 
 // Get first two, rest in array
 
+const scores = [33, 55, 34, 67, 24, 89, 90, 10]
 
+const [first , second, third, ...rest] = scores
 
+console.log(first, second, third)
+console.log(rest)
