@@ -241,3 +241,8 @@ const [first , second, third, ...rest] = scores
 
 console.log(first, second, third)
 console.log(rest)
+
+
+delete colors[0]
+
+console.log(colors)
