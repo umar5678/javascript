@@ -114,7 +114,7 @@ console.log(doubleByForEach);
 // │   • Each element is transformed by callback                     │
 // │   • ALWAYS return something from callback!                      │
 // │                                                                 │
-// │   🔥 REACT USE: Render lists of components!                     │
+// │   REACT USE: Render lists of components!                        │
 // │   {items.map(item => <Item key={item.id} data={item} />)}       │
 // │                                                                 │
 // └─────────────────────────────────────────────────────────────────┘

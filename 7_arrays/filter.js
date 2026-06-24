@@ -117,6 +117,11 @@ const lessThen10 = menu.filter((item) => {
 
 const names = ["Ali", "Fatima", "Osman", "Bilal", "Salman", "Ismail"];
 
+const namesSortedAcc = names.sort()
+
+
+console.log( "sorted: ",  namesSortedAcc)
+
 const vowels = "aeiouAEIOU";
 
 const namesStartWithVolwels = names.filter((name) => {
@@ -172,4 +177,4 @@ const inStockElectronic = products
 
 
   
-console.log(inStockElectronicItems)
+// console.log(inStockElectronicItems)
