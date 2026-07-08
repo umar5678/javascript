@@ -88,13 +88,13 @@ const findMAx = (numArr) => {
 
 // const values = [23, 45, 12, 607, 34, 89, 21];
 
-const max = values.reduce((max, n) => {
-  // if (num > maxNumber){
-  //     maxNumber = num
-  // }
-  // return maxNumber
+const max = values.reduce((maxNumber, num) => {
+  if (num > maxNumber){
+      maxNumber = num
+  }
+  return maxNumber
 
-  return n > max ? (max = n) : max;
+  // return n > max ? (max = n) : max;
 }, 0);
 
 const min = values.reduce((minNumber, num) => {
