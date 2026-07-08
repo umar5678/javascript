@@ -77,7 +77,7 @@ for (let i = 0; i < LIMIT; i++) {
 // console.log("1. Start async example ");
 
 // setTimeout is asynchronous - it schedules code for later
-// setTimeout, setInterval, await, prommis, , put into side stack, 
+// setTimeout, setInterval, await, promis, , put into side stack, 
 // setTimeout (() => {
 //     console.log("2: i am inside settime out callback that run after defined duration ")
 // } , 2000)
