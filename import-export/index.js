@@ -12,3 +12,4 @@ function greet (name) {
 const res = greet(user)
 
 console.log(res)
+
